@@ -8,8 +8,8 @@ import { GITHUB_URL } from "@/lib/site";
 
 export const NAV_LINKS = [
   { href: "#how", label: "How it works" },
-  { href: "#product", label: "Product" },
-  { href: "#oss", label: "Open source" },
+  { href: "#product", label: "Features" },
+  { href: "#ecosystem", label: "Architecture" },
   { href: "#faq", label: "FAQ" },
 ];
 
@@ -32,32 +32,16 @@ export function Nav() {
           ))}
         </div>
 
-        <div className="flex items-center gap-3.5">
-          <a
-            href={GITHUB_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="hidden text-[14.5px] text-ink-soft hover:text-ink min-[861px]:inline"
-          >
-            GitHub
-          </a>
-          {features.auth ? (
-            <Link
-              href="/login"
-              className="hidden text-[14.5px] text-ink-soft hover:text-ink min-[861px]:inline"
-            >
-              Sign in
-            </Link>
-          ) : null}
+        <div className="flex items-center gap-3">
           <Link
             href="/candidate/jobs"
-            className="hidden text-[14px] text-ink-soft hover:text-ink min-[861px]:inline border border-line rounded-lg px-2.5 py-1"
+            className="hidden text-[13.5px] font-medium text-ink-soft hover:text-ink min-[861px]:inline border border-line bg-surface rounded-lg px-3 py-1.5 transition-colors"
           >
             Candidate Portal
           </Link>
           <Link
             href="/recruiter/dashboard"
-            className="hidden text-[14px] text-indigo-400 hover:text-indigo-300 min-[861px]:inline border border-indigo-500/30 bg-indigo-500/10 rounded-lg px-2.5 py-1"
+            className="hidden text-[13.5px] font-medium text-indigo-400 hover:text-indigo-300 min-[861px]:inline border border-indigo-500/30 bg-indigo-500/10 rounded-lg px-3 py-1.5 transition-colors"
           >
             Recruiter Hub
           </Link>
@@ -65,11 +49,11 @@ export function Nav() {
             Live Voice Mock
           </Link>
           <MobileMenu
-            links={
-              features.auth
-                ? [...NAV_LINKS, { href: "/login", label: "Sign in" }]
-                : NAV_LINKS
-            }
+            links={[
+              ...NAV_LINKS,
+              { href: "/candidate/jobs", label: "Candidate Portal" },
+              { href: "/recruiter/dashboard", label: "Recruiter Hub" },
+            ]}
           />
         </div>
       </Container>

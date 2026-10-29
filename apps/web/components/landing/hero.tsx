@@ -12,17 +12,15 @@ export function Hero() {
     <header id="top" className="border-b border-line">
       <Container className="grid items-center gap-11 pt-[84px] pb-16 min-[920px]:grid-cols-[1.04fr_0.96fr] min-[920px]:gap-14">
         <div>
-          <Eyebrow>Open-source AI interviewer</Eyebrow>
+          <Eyebrow>Autonomous AI Hiring &amp; Voice Interview Platform</Eyebrow>
           <h1 className="serif mt-[18px] mb-[22px] text-[44px] text-ink min-[920px]:text-[60px]">
-            Practice the interview{" "}
-            <em className="italic text-accent">out loud.</em>
+            Smart Talent Hiring.{" "}
+            <em className="italic text-accent">Interview out loud.</em>
             <br />
-            Then pass the real one.
+            Accelerate Every Step.
           </h1>
           <p className="mb-7 max-w-[520px] text-lg text-ink-soft">
-            DeepInterview reads your CV and the job description, researches the
-            company, and runs a real voice mock interview — then shows you
-            exactly what to fix. English-first, available in 10+ languages.
+            InterviewByte powers the complete recruitment lifecycle: intelligent resume parsing, automated candidate shortlisting, real-time voice mock interviews, and browser proctoring.
           </p>
           <div className="flex flex-wrap items-center gap-3">
             <Link
@@ -43,14 +41,13 @@ export function Hero() {
           </div>
           <div className="mt-[18px] flex flex-wrap gap-3.5 text-[13px] text-faint">
             <span className="flex items-center gap-1.5">
-              <Check size={14} className="text-ok" /> No credit card
+              <Check size={14} className="text-ok" /> Real-Time Voice Agent
             </span>
             <span className="flex items-center gap-1.5">
-              <Check size={14} className="text-ok" /> Self-host with your own
-              keys
+              <Check size={14} className="text-ok" /> Smart Resume Parser
             </span>
             <span className="flex items-center gap-1.5">
-              <Check size={14} className="text-ok" /> Apache 2.0
+              <Check size={14} className="text-ok" /> AI Proctoring Engine
             </span>
           </div>
         </div>

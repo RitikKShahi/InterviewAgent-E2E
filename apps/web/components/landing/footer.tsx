@@ -35,23 +35,25 @@ function FooterCol({ title, links }: { title: string; links: FooterLink[] }) {
   );
 }
 
-const PRODUCT_LINKS: FooterLink[] = [
+const PLATFORM_LINKS: FooterLink[] = [
   { href: "#how", label: "How it works" },
   { href: "#product", label: "Features" },
-  { href: "#faq", label: "FAQ" },
+  { href: "#ecosystem", label: "Architecture" },
+  { href: "/setup", label: "Live Voice Mock" },
 ];
 
-const DEVELOPER_LINKS: FooterLink[] = [
-  { href: GITHUB_URL, label: "GitHub", external: true },
-  { href: DOCS_URL, label: "Documentation", external: true },
-  { href: DOCS_URL, label: "Self-hosting", external: true },
-  { href: GITHUB_URL, label: "Language packs", external: true },
+const CANDIDATE_LINKS: FooterLink[] = [
+  { href: "/candidate/jobs", label: "Browse Job Openings" },
+  { href: "/candidate/profile", label: "Candidate Profile & Resume" },
+  { href: "/candidate/interviews", label: "My Interview Sessions" },
+  { href: "/candidate/login", label: "Candidate Sign In" },
 ];
 
-const COMMUNITY_LINKS: FooterLink[] = [
-  { href: `${GITHUB_URL}/discussions`, label: "Discussions", external: true },
-  { href: `${GITHUB_URL}/issues`, label: "Issues", external: true },
-  { href: GITHUB_URL, label: "Contributing", external: true },
+const RECRUITER_LINKS: FooterLink[] = [
+  { href: "/recruiter/dashboard", label: "Recruiter Dashboard" },
+  { href: "/recruiter/jobs", label: "Post & Manage Jobs" },
+  { href: "/recruiter/interviews", label: "Applicant Shortlisting" },
+  { href: "/recruiter/login", label: "Recruiter Sign In" },
 ];
 
 export function Footer() {
@@ -66,17 +68,17 @@ export function Footer() {
                 InterviewByte
               </span>
             </div>
-            <p className="max-w-[280px] text-sm text-muted">
-              AI Recruitment & Autonomous Agentic Voice Interview Platform.
+            <p className="max-w-[280px] text-sm text-muted leading-relaxed">
+              Autonomous AI Voice Interview &amp; Intelligent Recruitment Platform.
             </p>
           </div>
-          <FooterCol title="Product" links={PRODUCT_LINKS} />
-          <FooterCol title="Developers" links={DEVELOPER_LINKS} />
-          <FooterCol title="Community" links={COMMUNITY_LINKS} />
+          <FooterCol title="Platform" links={PLATFORM_LINKS} />
+          <FooterCol title="Candidates" links={CANDIDATE_LINKS} />
+          <FooterCol title="Recruiters" links={RECRUITER_LINKS} />
         </div>
         <div className="flex flex-wrap items-center justify-between gap-2.5 border-t border-line pt-[22px] text-[13px] text-faint">
-          <span>© 2026 InterviewByte</span>
-          <span className="font-mono">Built in the open</span>
+          <span>© 2026 InterviewByte. All rights reserved.</span>
+          <span className="font-mono text-xs">Empowered by Multi-Modal Voice AI</span>
         </div>
       </Container>
     </footer>

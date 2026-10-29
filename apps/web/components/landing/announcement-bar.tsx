@@ -1,5 +1,5 @@
+import Link from "next/link";
 import { Container } from "@/components/ui/container";
-import { GITHUB_URL } from "@/lib/site";
 
 export function AnnouncementBar() {
   return (
@@ -7,19 +7,20 @@ export function AnnouncementBar() {
       <Container className="flex h-[38px] items-center justify-center gap-2.5 text-[13px] text-muted">
         <span
           aria-hidden="true"
-          className="inline-block h-[5px] w-[5px] rounded-full bg-accent"
+          className="inline-block h-[6px] w-[6px] rounded-full bg-indigo-500 animate-pulse"
         />
         <b className="font-semibold text-ink">
-          Open source &amp; self-hostable
+          InterviewByte
         </b>
-        <a
-          href={GITHUB_URL}
-          target="_blank"
-          rel="noreferrer"
-          className="text-muted hover:text-ink"
+        <span className="hidden sm:inline text-ink-soft">
+          — Autonomous AI Voice Interviews, Resume Parsing &amp; Proctoring
+        </span>
+        <Link
+          href="/candidate/jobs"
+          className="font-medium text-accent hover:underline inline-flex items-center gap-1"
         >
-          ★ Star us on GitHub →
-        </a>
+          Explore Careers &amp; Jobs →
+        </Link>
       </Container>
     </div>
   );
